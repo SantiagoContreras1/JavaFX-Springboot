@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aldairgonzalez.webapp.biblioteca.controller.FXController.LibroControllerView">
+   <children>
+      <ImageView fitHeight="650.0" fitWidth="1023.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/Libros.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tablaLibros" layoutX="233.0" layoutY="161.0" onMouseClicked="#cargarFormEditar" prefHeight="398.0" prefWidth="761.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="colIsbn" prefWidth="75.0" text="ISBN" />
+            <TableColumn fx:id="colNombre" prefWidth="75.0" text="Nombre" />
+            <TableColumn fx:id="colSipnosis" prefWidth="75.0" text="Sipnosis" />
+            <TableColumn fx:id="colAutor" prefWidth="75.0" text="Autor" />
+            <TableColumn fx:id="colEditorial" prefWidth="75.0" text="Editorial" />
+            <TableColumn fx:id="colDisponibilidad" prefWidth="75.0" text="Disponibilidad" />
+            <TableColumn fx:id="colEstanteria" prefWidth="75.0" text="Estanteria" />
+            <TableColumn fx:id="colCluster" prefWidth="75.0" text="Cluster" />
+            <TableColumn fx:id="colCategoria" prefWidth="82.00002034505212" text="Categoria" />
+        </columns>
+      </TableView>
+      <TextField fx:id="tfId" editable="false" layoutX="35.0" layoutY="198.0" promptText="ID" />
+      <TextField fx:id="tfIsbn" layoutX="35.0" layoutY="248.0" promptText="ISBN" />
+      <TextField fx:id="tfNombre" layoutX="35.0" layoutY="300.0" promptText="Nombre" />
+      <TextField fx:id="tfAutor" layoutX="35.0" layoutY="348.0" promptText="Autor" />
+      <TextField fx:id="tfEditorial" layoutX="35.0" layoutY="396.0" promptText="Editorial" />
+      <TextField fx:id="tfdisponibilidad" editable="false" layoutX="35.0" layoutY="447.0" promptText="Disponibilidad" />
+      <TextField fx:id="tfEstanteria" layoutX="35.0" layoutY="494.0" promptText="Estanteria" />
+      <TextField fx:id="tfCluster" layoutX="35.0" layoutY="546.0" promptText="Cluster" />
+      <TextArea fx:id="taSipnosis" layoutX="233.0" layoutY="58.0" prefHeight="91.0" prefWidth="251.0" promptText="Escriba la sipnosis" wrapText="true" />
+      <ComboBox fx:id="cmbCategorias" layoutX="498.0" layoutY="58.0" prefWidth="150.0" promptText="Categorias" />
+      <Button fx:id="btnGuardar" layoutX="35.0" layoutY="588.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="45.0" prefWidth="90.0" style="-fx-background-color: b693ae;" text="Guardar" />
+      <Button fx:id="btnLimpiar" layoutX="156.0" layoutY="588.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="45.0" prefWidth="90.0" style="-fx-background-color: b693ae;" text="Limpiar Formulario" />
+      <Button fx:id="btnEliminar" layoutX="887.0" layoutY="588.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="45.0" prefWidth="90.0" style="-fx-background-color: b693ae;" text="Eliminar" />
+      <Button fx:id="btnRegresar" layoutX="295.0" layoutY="588.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="45.0" prefWidth="90.0" style="-fx-background-color: b693ae;" text="Regresar" />
+      <TextField fx:id="tfBuscar" layoutX="499.0" layoutY="117.0" prefHeight="25.0" prefWidth="216.0" promptText="Buscar Libro" />
+      <Button fx:id="btnBuscar" layoutX="732.0" layoutY="117.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="28.0" text="Button" />
+      <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="732.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assests/Lupa.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
